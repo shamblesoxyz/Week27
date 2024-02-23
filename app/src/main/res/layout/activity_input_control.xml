@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/purple_gradient_background"
     tools:context=".InputControlActivity"
     android:id="@+id/constraintLayout2">
 
     <Switch
         android:id="@+id/wifiSwitch"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginTop="52dp"
         android:text="Wifi"
         android:textColor="@color/white"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Backgound 1"
+        android:text="Pink gradient background"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,15 +33,14 @@
 
     <ImageButton
         android:id="@+id/openImageButton1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@drawable/open_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/changemebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressHorizontal"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.121" />
 
     <RadioGroup
         android:id="@+id/radioGroupBackground"
@@ -59,14 +58,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="Background 2"
+            android:text="Blue gradient background"
             android:textColor="@color/white" />
 
         <RadioButton
             android:id="@+id/radioButtonBackground3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Background 3"
+            android:text="Red gradient background"
             android:textColor="@color/white" />
     </RadioGroup>
 
