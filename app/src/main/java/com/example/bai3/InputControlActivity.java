@@ -1,9 +1,11 @@
 package com.example.bai3;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -130,6 +132,15 @@ public class InputControlActivity extends AppCompatActivity {
         Button btnSetting2 = (Button) findViewById(R.id.btnSetting2);
         registerForContextMenu(btnSetting2);
 
+        //Open alert dialog
+        Button btnDialog = (Button) findViewById(R.id.btnDialog);
+        btnDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAlertDialog(bg);
+            }
+        });
+
     }
 
     //Call menu
@@ -196,5 +207,25 @@ public class InputControlActivity extends AppCompatActivity {
                 Toast.makeText(InputControlActivity.this, "You choose Privacy", Toast.LENGTH_SHORT).show();
         }
         return super.onContextItemSelected(item);
+    }
+
+    //Alert dialog
+    public void showAlertDialog(ConstraintLayout constraintLayout){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Notice");
+        alert.setMessage("You just opened alert dialog. Do you want to change another background?");
+        alert.setPositiveButton("Okay, thanks", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                constraintLayout.setBackgroundResource(R.drawable.blue_gradient_background);
+            }
+        });
+        alert.setNegativeButton("Don't need", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //Close alert dialog
+            }
+        });
+        alert.show();
     }
 }
