@@ -23,9 +23,8 @@ public class ImageViewActivity extends AppCompatActivity {
 
         //Random background
         ArrayList<Integer> arrayList = new ArrayList<>();
-        arrayList.add(R.drawable.background1);
-        arrayList.add(R.drawable.background2);
-        arrayList.add(R.drawable.background3);
+        arrayList.add(R.drawable.blue_gradient_background);
+        arrayList.add(R.drawable.purple_gradient_background);
 
         Random random = new Random();
         int vitri = random.nextInt(arrayList.size());

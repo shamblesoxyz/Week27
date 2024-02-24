@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:title="Settings"
-        android:id="@+id/menuSetting"
+    <item android:title="Share"
+        android:id="@+id/menuShare"
         android:icon="@android:drawable/ic_menu_set_as"
         app:showAsAction="always"/>
-    />
-    <item android:title="Share"
+    <item android:title="Settings"
         android:orderInCategory="1"
-        android:id="@+id/menuShare"/>/>
-    <item android:title="Log out"
+        android:id="@+id/menuSetting"/>
+    <item android:title="Logout"
         android:orderInCategory="2"
-        android:id="@+id/menuLogout"/>/>
+        android:id="@+id/menuLogout"/>
     <item android:title="Menu con"
         android:orderInCategory="3">
         <menu>
